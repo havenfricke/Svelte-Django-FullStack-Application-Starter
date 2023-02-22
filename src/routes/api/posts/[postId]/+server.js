@@ -8,6 +8,7 @@ export const GET = async ({ params }) => {
     return new Response(
         JSON.stringify({
             data
-        })
+        }),
+        { status: 200 }
     )
 }
