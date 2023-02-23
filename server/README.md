@@ -1,3 +1,5 @@
+SOURCE CONTENT: https://www.digitalocean.com/community/tutorials/build-a-to-do-application-using-django-and-react
+
 Step 1 — Setting Up the Backend
 In this section, you will create a new project directory and install Django.
 
