@@ -1,5 +1,6 @@
 import { appState } from "../../../appState"
 
+/** @type {import('./$types').PageLoad} */
 export const load = ({ params, fetch }) => {
 
     const fetchPost = async (id) => {
