@@ -137,11 +137,7 @@ python manage.py runserver
 
 Navigate to http://localhost:8000/admin in your web browser. And log in with the username and password that was created earlier:
 
-Screenshot of the admin interface for the Django application.
-
 You can create, edit, and, delete Todo items using this interface:
-
-Screenshot of the admin interface for the Django application displaying todo items.
 
 After experimenting with this interface, you can stop the server (CONTROL+C or CTRL+C).
 
@@ -263,12 +259,8 @@ You can CREATE a new Todo item using the interface:
 
 If the Todo item is created successfully, you will be presented with a successful response:
 
-Screenshot of the API response for a successful Todo item creation.
-
 You can also perform DELETE and UPDATE operations on specific Todo items using the id primary keys. Use the address structure /api/todos/{id} and provide an id.
 
 Add 1 to the URL to examine the Todo item with the id of “1”. Navigate to http://localhost:8000/api/todos/1 in your web browser:
-
-Screenshot of API tools for DELETE and PUT.
 
 This completes the building of the backend of the application.
