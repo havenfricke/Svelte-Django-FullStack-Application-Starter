@@ -5,11 +5,11 @@ In this section, you will create a new project directory and install Django.
 
 Open a new terminal window and run the following command to create a new project directory:
 
-mkdir django-todo-react
+mkdir your-server-name
 
 Next, navigate into the directory:
 
-cd django-todo-react
+cd your-server-name
 
 Now install Pipenv using pip:
 
