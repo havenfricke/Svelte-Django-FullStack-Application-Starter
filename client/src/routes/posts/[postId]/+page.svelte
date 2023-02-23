@@ -1,6 +1,6 @@
 <script>
-       /** @type {import('./$types').PageData} */
 	import { appState } from "../../../appState";
+           /** @type {import('./$types').PageData} */
 </script>
 
 <div>

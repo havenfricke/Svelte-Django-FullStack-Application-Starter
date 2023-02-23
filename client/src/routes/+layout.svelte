@@ -3,6 +3,7 @@
     <a href="/posts">Posts</a>
     <a href="/about">About</a>
     <a href="/settings">Settings</a>
+    <a href="/todos">Todos</a>
 </nav>
   
   <slot></slot>
