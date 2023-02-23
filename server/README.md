@@ -1,3 +1,63 @@
+Step 1 — Setting Up the Backend
+In this section, you will create a new project directory and install Django.
+
+Open a new terminal window and run the following command to create a new project directory:
+
+mkdir django-todo-react
+Next, navigate into the directory:
+
+cd django-todo-react
+Now install Pipenv using pip:
+
+pip install pipenv
+Note: Depending on your installation, you may need to use pip3 instead of pip.
+
+And activate a new virtual environment:
+
+pipenv shell
+Install Django using Pipenv:
+
+pipenv install django
+Then create a new project called backend:
+
+django-admin startproject backend
+Next, navigate into the newly created backend directory:
+
+cd backend
+Start a new application called todo:
+
+python manage.py startapp todo
+Run migrations:
+
+python manage.py migrate
+And start up the server:
+
+python manage.py runserver
+Navigate to http://localhost:8000 in your web browser:
+
+At this point, you will see an instance of a Django application running successfully. Once you are finished, you can stop the server (CONTROL+C or CTRL+C).
+
+Registering the todo Application
+Now that you have completed the setup for the backend, you can begin registering the todo application as an installed app so that Django can recognize it.
+
+Open the backend/settings.py file in your code editor and add todo to the INSTALLED_APPS:
+
+backend/settings.py:
+
+        # Application definition
+
+        INSTALLED_APPS = [
+        'django.contrib.admin',
+        'django.contrib.auth',
+        'django.contrib.contenttypes',
+        'django.contrib.sessions',
+        'django.contrib.messages',
+        'django.contrib.staticfiles',
+        'todo',
+        ]
+
+Then, save your changes.
+
 # Defining the Todo Model
 
 Let’s create a model to define how the Todo items should be stored in the database.
