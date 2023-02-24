@@ -5,45 +5,45 @@ In this section, you will create a new project directory and install Django.
 
 Open a new terminal window and run the following command to create a new project directory:
 
-mkdir your-server-name
+                mkdir your-server-name
 
 Next, navigate into the directory:
 
-cd your-server-name
+                cd your-server-name
 
 Now install Pipenv using pip:
 
-pip install pipenv
+                pip install pipenv
 
 Note: Depending on your installation, you may need to use pip3 instead of pip.
 
 And activate a new virtual environment:
 
-pipenv shell
+                pipenv shell
 
 Install Django using Pipenv:
 
-pipenv install django
+                pipenv install django
 
-Then create a new project called backend:
+Then create a new project called server:
 
-django-admin startproject backend
+                django-admin startproject server
 
-Next, navigate into the newly created backend directory:
+Next, navigate into the newly created server directory:
 
-cd backend
+                cd server
 
 Start a new application called todo:
 
-python manage.py startapp todo
+                python manage.py startapp todo
 
 Run migrations:
 
-python manage.py migrate
+                python manage.py migrate
 
 And start up the server:
 
-python manage.py runserver
+                python manage.py runserver
 
 Navigate to http://localhost:8000 in your web browser:
 
@@ -51,11 +51,11 @@ At this point, you will see an instance of a Django application running successf
 
 # Registering the todo Application
 
-Now that you have completed the setup for the backend, you can begin registering the todo application as an installed app so that Django can recognize it.
+Now that you have completed the setup for the server, you can begin registering the todo application as an installed app so that Django can recognize it.
 
-Open the backend/settings.py file in your code editor and add todo to the INSTALLED_APPS:
+Open the server/settings.py file in your code editor and add todo to the INSTALLED_APPS:
 
-backend/settings.py:
+        server/settings.py:
 
         # Application definition
 
@@ -77,7 +77,7 @@ Let’s create a model to define how the Todo items should be stored in the data
 
 Open the todo/models.py file in your code editor and add the following lines of code:
 
-todo/models.py
+        todo/models.py
 
         from django.db import models
 
@@ -100,17 +100,17 @@ The completed property is the status of a task. A task will either be completed 
 
 now run command:
 
-python manage.py makemigrations todo
+                python manage.py makemigrations todo
 
 And apply the changes to the database with this command:
 
-python manage.py migrate todo
+                python manage.py migrate todo
 
 You can test to see that CRUD operations work on the Todo model you created by using the admin interface that Django provides by default.
 
 Open the todo/admin.py file with your code editor and add the following lines of code:
 
-todo/admin.py:
+        todo/admin.py:
 
         from django.contrib import admin
         from .models import Todo
@@ -150,9 +150,9 @@ run command:
 
 pipenv install djangorestframework django-cors-headers
 
-You need to add rest_framework and corsheaders to the list of installed applications. Open the backend/settings.py file in your code editor and update the INSTALLED_APPS and MIDDLEWARE sections:
+You need to add rest_framework and corsheaders to the list of installed applications. Open the server/settings.py file in your code editor and update the INSTALLED_APPS and MIDDLEWARE sections:
 
-                backend/settings.py
+         server/settings.py
 
                 # Application definition
 
@@ -179,9 +179,8 @@ You need to add rest_framework and corsheaders to the list of installed applicat
                 'corsheaders.middleware.CorsMiddleware', <- [Add this]
                 ]
 
-Then, add these lines of code to the bottom of the backend/settings.py file:
-
-backend/settings.py
+Then, add these lines of code to the bottom of the server/settings.py file:
+server/settings.py
 CORS_ORIGIN_WHITELIST = [
 'http://localhost:3000'
 'http://yourfrontendurlhere:4202'
@@ -194,7 +193,7 @@ You will need serializers to convert model instances to JSON so that the fronten
 
 Create a todo/serializers.py file with your code editor. Open the serializers.py file and update it with the following lines of code:
 
-todo/serializers.py:
+        todo/serializers.py:
 
         from rest_framework import serializers
         from .models import Todo
@@ -211,7 +210,7 @@ You will need to create a TodoView class in the todo/views.py file.
 
 Open the todo/views.py file with your code editor and add the following lines of code:
 
-todo/views.py:
+        todo/views.py:
 
         from django.shortcuts import render
         from rest_framework import viewsets
@@ -226,9 +225,9 @@ todo/views.py:
 
 The viewsets base class provides the implementation for CRUD operations by default. This code specifies the serializer_class and the queryset.
 
-Open the backend/urls.py file with your code editor and replace the contents with the following lines of code:
+Open the server/urls.py file with your code editor and replace the contents with the following lines of code:
 
-backend/urls.py:
+server/urls.py:
 
         from django.contrib import admin
         from django.urls import path, include
@@ -263,4 +262,4 @@ You can also perform DELETE and UPDATE operations on specific Todo items using t
 
 Add 1 to the URL to examine the Todo item with the id of “1”. Navigate to http://localhost:8000/api/todos/1 in your web browser:
 
-This completes the building of the backend of the application.
+This completes the building of the server of the application.
