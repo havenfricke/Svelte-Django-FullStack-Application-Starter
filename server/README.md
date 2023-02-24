@@ -152,32 +152,32 @@ pipenv install djangorestframework django-cors-headers
 
 You need to add rest_framework and corsheaders to the list of installed applications. Open the backend/settings.py file in your code editor and update the INSTALLED_APPS and MIDDLEWARE sections:
 
-backend/settings.py
+                backend/settings.py
 
-# Application definition
+                # Application definition
 
-INSTALLED_APPS = [
-'django.contrib.admin',
-'django.contrib.auth',
-'django.contrib.contenttypes',
-'django.contrib.sessions',
-'django.contrib.messages',
-'django.contrib.staticfiles',
-'corsheaders', <- Add this
-'rest_framework', <- Add this
-'todo', <- Add this for every model created
-]
+                INSTALLED_APPS = [
+                'django.contrib.admin',
+                'django.contrib.auth',
+                'django.contrib.contenttypes',
+                'django.contrib.sessions',
+                'django.contrib.messages',
+                'django.contrib.staticfiles',
+                'corsheaders', <- [Add this]
+                'rest_framework', <- [Add this]
+                'todo', <- [Add this for every model created]
+                ]
 
-MIDDLEWARE = [
-'django.middleware.security.SecurityMiddleware',
-'django.contrib.sessions.middleware.SessionMiddleware',
-'django.middleware.common.CommonMiddleware',
-'django.middleware.csrf.CsrfViewMiddleware',
-'django.contrib.auth.middleware.AuthenticationMiddleware',
-'django.contrib.messages.middleware.MessageMiddleware',
-'django.middleware.clickjacking.XFrameOptionsMiddleware',
-'corsheaders.middleware.CorsMiddleware', <- Add this
-]
+                MIDDLEWARE = [
+                'django.middleware.security.SecurityMiddleware',
+                'django.contrib.sessions.middleware.SessionMiddleware',
+                'django.middleware.common.CommonMiddleware',
+                'django.middleware.csrf.CsrfViewMiddleware',
+                'django.contrib.auth.middleware.AuthenticationMiddleware',
+                'django.contrib.messages.middleware.MessageMiddleware',
+                'django.middleware.clickjacking.XFrameOptionsMiddleware',
+                'corsheaders.middleware.CorsMiddleware', <- [Add this]
+                ]
 
 Then, add these lines of code to the bottom of the backend/settings.py file:
 
