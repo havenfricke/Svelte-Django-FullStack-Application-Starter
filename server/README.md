@@ -1,6 +1,6 @@
 SOURCE CONTENT: https://www.digitalocean.com/community/tutorials/build-a-to-do-application-using-django-and-react
 
-Step 1 — Setting Up the Backend
+# Setting Up the Backend
 
 In this section, you will create a new project directory and install Django.
 
@@ -128,13 +128,14 @@ Then, save your changes.
 You will need to create a “superuser” account to access the admin interface. Run the following command in your terminal:
 
 run command:
-python manage.py createsuperuser
+
+        python manage.py createsuperuser
 
 You will be prompted to enter a username, email, and password for the superuser. Be sure to enter details that you can remember because you will need them to log in to the admin dashboard.
 
 Start the server once again:
 
-python manage.py runserver
+        python manage.py runserver
 
 Navigate to http://localhost:8000/admin in your web browser. And log in with the username and password that was created earlier:
 
@@ -149,36 +150,36 @@ Install the djangorestframework and django-cors-headers using Pipenv:
 
 run command:
 
-pipenv install djangorestframework django-cors-headers
+        pipenv install djangorestframework django-cors-headers
 
 You need to add rest_framework and corsheaders to the list of installed applications. Open the server/settings.py file in your code editor and update the INSTALLED_APPS and MIDDLEWARE sections:
 
          server/settings.py
 
-                # Application definition
+        # Application definition
 
-                INSTALLED_APPS = [
-                'django.contrib.admin',
-                'django.contrib.auth',
-                'django.contrib.contenttypes',
-                'django.contrib.sessions',
-                'django.contrib.messages',
-                'django.contrib.staticfiles',
-                'corsheaders', <- [Add this]
-                'rest_framework', <- [Add this]
-                'todo', <- [Add this for every model created]
-                ]
+        INSTALLED_APPS = [
+        'django.contrib.admin',
+        'django.contrib.auth',
+        'django.contrib.contenttypes',
+        'django.contrib.sessions',
+        'django.contrib.messages',
+        'django.contrib.staticfiles',
+        'corsheaders', <- [Add this]
+        'rest_framework', <- [Add this]
+        'todo', <- [Add this for every model created]
+        ]
 
-                MIDDLEWARE = [
-                'django.middleware.security.SecurityMiddleware',
-                'django.contrib.sessions.middleware.SessionMiddleware',
-                'django.middleware.common.CommonMiddleware',
-                'django.middleware.csrf.CsrfViewMiddleware',
-                'django.contrib.auth.middleware.AuthenticationMiddleware',
-                'django.contrib.messages.middleware.MessageMiddleware',
-                'django.middleware.clickjacking.XFrameOptionsMiddleware',
-                'corsheaders.middleware.CorsMiddleware', <- [Add this]
-                ]
+        MIDDLEWARE = [
+        'django.middleware.security.SecurityMiddleware',
+        'django.contrib.sessions.middleware.SessionMiddleware',
+        'django.middleware.common.CommonMiddleware',
+        'django.middleware.csrf.CsrfViewMiddleware',
+        'django.contrib.auth.middleware.AuthenticationMiddleware',
+        'django.contrib.messages.middleware.MessageMiddleware',
+        'django.middleware.clickjacking.XFrameOptionsMiddleware',
+        'corsheaders.middleware.CorsMiddleware', <- [Add this]
+        ]
 
 Then, add these lines of code to the bottom of the server/settings.py file:
 server/settings.py
@@ -228,7 +229,7 @@ The viewsets base class provides the implementation for CRUD operations by defau
 
 Open the server/urls.py file with your code editor and replace the contents with the following lines of code:
 
-server/urls.py:
+        server/urls.py:
 
         from django.contrib import admin
         from django.urls import path, include
