@@ -1,9 +1,9 @@
 # (DEPLOYMENT DOCS COMING SOON...)
 
-        SOURCE AUTHOR: Jordan Irabor
-        SOURCE CONTENT: https://www.digitalocean.com/community/tutorials/build-a-to-do-application-using-django-and-react
-
 # Setting Up the Backend
+
+SOURCE AUTHOR: Jordan Irabor
+SOURCE CONTENT: https://www.digitalocean.com/community/tutorials/build-a-to-do-application-using-django-and-react
 
 Note: It has already been setup so you may fork and download, npm i in the client folde
 
