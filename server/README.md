@@ -1,49 +1,50 @@
 SOURCE CONTENT: https://www.digitalocean.com/community/tutorials/build-a-to-do-application-using-django-and-react
 
 Step 1 — Setting Up the Backend
+
 In this section, you will create a new project directory and install Django.
 
 Open a new terminal window and run the following command to create a new project directory:
 
-                mkdir your-server-name
+        mkdir your-server-name
 
 Next, navigate into the directory:
 
-                cd your-server-name
+        cd your-server-name
 
 Now install Pipenv using pip:
 
-                pip install pipenv
+        pip install pipenv
 
 Note: Depending on your installation, you may need to use pip3 instead of pip.
 
 And activate a new virtual environment:
 
-                pipenv shell
+        pipenv shell
 
 Install Django using Pipenv:
 
-                pipenv install django
+        pipenv install django
 
 Then create a new project called server:
 
-                django-admin startproject server
+        django-admin startproject server
 
 Next, navigate into the newly created server directory:
 
-                cd server
+        cd server
 
 Start a new application called todo:
 
-                python manage.py startapp todo
+        python manage.py startapp todo
 
 Run migrations:
 
-                python manage.py migrate
+        python manage.py migrate
 
 And start up the server:
 
-                python manage.py runserver
+        python manage.py runserver
 
 Navigate to http://localhost:8000 in your web browser:
 
@@ -100,11 +101,11 @@ The completed property is the status of a task. A task will either be completed 
 
 now run command:
 
-                python manage.py makemigrations todo
+        python manage.py makemigrations todo
 
 And apply the changes to the database with this command:
 
-                python manage.py migrate todo
+        python manage.py migrate todo
 
 You can test to see that CRUD operations work on the Todo model you created by using the admin interface that Django provides by default.
 
@@ -250,7 +251,7 @@ You can now perform CRUD operations on the Todo model. The router class allows y
 /todos/id - returns a single Todo item using the id primary key. UPDATE and DELETE operations can be performed here.
 Let’s restart the server:
 
-python manage.py runserver
+        python manage.py runserver
 
 Navigate to http://localhost:8000/api/todos in your web browser:
 
