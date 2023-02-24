@@ -6,7 +6,15 @@ SOURCE AUTHOR: Jordan Irabor
 
 SOURCE CONTENT: https://www.digitalocean.com/community/tutorials/build-a-to-do-application-using-django-and-react
 
-Note: It has already been setup so you may fork and download, npm i in the client folde
+Note: It has already been setup, so if you would like to get started, fork and download then do the following:
+
+        cd client
+
+then,
+
+        npm install
+
+otherwise, please review the following for a more in depth understanding.
 
 In this section, you will create a new project directory and install Django.
 
