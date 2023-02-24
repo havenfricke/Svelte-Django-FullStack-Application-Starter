@@ -1,3 +1,4 @@
+AOURCE AUTHOR: Jordan Irabor
 SOURCE CONTENT: https://www.digitalocean.com/community/tutorials/build-a-to-do-application-using-django-and-react
 
 # Setting Up the Backend
