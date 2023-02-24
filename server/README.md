@@ -67,7 +67,7 @@ Open the server/settings.py file in your code editor and add todo to the INSTALL
         'django.contrib.sessions',
         'django.contrib.messages',
         'django.contrib.staticfiles',
-        'todo',
+        'todo', <- [Add this]
         ]
 
 Then, save your changes.
