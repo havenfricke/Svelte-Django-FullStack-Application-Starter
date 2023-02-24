@@ -1,12 +1,6 @@
 # (DEPLOYMENT DOCS COMING SOON...)
 
-# Setting Up the Backend
-
-SOURCE AUTHOR: Jordan Irabor
-
-SOURCE CONTENT: https://www.digitalocean.com/community/tutorials/build-a-to-do-application-using-django-and-react
-
-Note: It has already been setup, so if you would like to get started, fork and download then do the following:
+Immediate use:
 
         cd client
 
@@ -15,6 +9,12 @@ then,
         npm install
 
 otherwise, please review the following for a more in depth understanding.
+
+# Setting Up the Backend
+
+SOURCE AUTHOR: Jordan Irabor
+
+SOURCE CONTENT: https://www.digitalocean.com/community/tutorials/build-a-to-do-application-using-django-and-react
 
 In this section, you will create a new project directory and install Django.
 
