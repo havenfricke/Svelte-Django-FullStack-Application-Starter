@@ -1,4 +1,5 @@
 # (DEPLOYMENT DOCS COMING SOON...)
+For now, please see https://github.com/havenfricke/vercel-django-example for deployment on Vercel.
 
 Immediate use:
 
