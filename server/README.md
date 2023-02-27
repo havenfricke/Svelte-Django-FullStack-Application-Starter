@@ -8,6 +8,14 @@ then,
 
         npm install
 
+lastly,
+
+        cd..
+
+        cd server
+
+        python manage.py runserver
+
 otherwise, please review the following for a more in depth understanding.
 
 # Setting Up the Backend
